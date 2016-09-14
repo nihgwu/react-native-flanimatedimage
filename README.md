@@ -1,7 +1,7 @@
 # react-native-flanimatedimage
 FLAnimatedImage for React Native
 
-This moodule is modified from https://github.com/browniefed/react-native-flanimatedimage with the following changes: 
+This module is modified from https://github.com/browniefed/react-native-flanimatedimage with the following changes: 
 * use _Carthage_ for FLAnimatedImage dependency
 * async image loading
 * return the image size `onLoadEnd`
