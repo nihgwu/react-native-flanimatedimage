@@ -11,7 +11,7 @@ This moodule is modified from https://github.com/browniefed/react-native-flanima
 **You have to install [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) first** via _Carthage_
 
 ```shell
-npm install nihgwu/react-native-flanimatedimage --save
+npm install react-native-flanimatedimage --save
 ```
 
 ## Link
