@@ -8,6 +8,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
+
 const {
   ScaleToFill,
   ScaleAspectFit,
@@ -49,7 +51,8 @@ class FLAnimatedImage extends Component {
 
   render() {
     const contentMode = MODES[this.props.resizeMode];
-    const src = this.props.source.uri;
+    const source = resolveAssetSource(this.props.source) || { uri: undefined, width: undefined, height: undefined };
+    const src = source.uri;
     return (
       <RNFLAnimatedImage {...this.props} src={src} contentMode={contentMode} />
     );
