@@ -1,6 +1,6 @@
 {
   "name": "react-native-flanimatedimage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "FLAnimatedImage for React Native",
   "main": "index.js",
   "scripts": {
