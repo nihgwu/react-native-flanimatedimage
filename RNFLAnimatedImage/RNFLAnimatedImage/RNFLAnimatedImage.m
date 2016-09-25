@@ -84,6 +84,13 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
     NSData *_imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:_src]];
     
     if(_imageData == nil) {
+      _imageData = [NSData dataWithContentsOfFile:[NSURL URLWithString:_src]];
+    }
+    
+    if(_imageData == nil) {
+      if(_onLoadEnd) {
+        _onLoadEnd(@{});
+      }
       return;
     }
     
