@@ -6,7 +6,7 @@
 //  Copyright © 2016 Neo. All rights reserved.
 //
 
-#import "RCTView.h"
+#import <React/RCTView.h>
 #import "FLAnimatedImage.h"
 
 @class RNFLAnimatedImage;
