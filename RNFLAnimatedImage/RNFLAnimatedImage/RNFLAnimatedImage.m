@@ -12,10 +12,10 @@
 #import "FLAnimatedImage.h"
 #import "RNFLAnimatedImage.h"
 
-#import "RCTBridgeModule.h"
+#import <React/RCTBridgeModule.h>
 #import "RCTImageUtils.h"
-#import "UIView+React.h"
-#import "RCTLog.h"
+#import <React/UIView+React.h>
+#import <React/RCTLog.h>
 
 @implementation RNFLAnimatedImage  {
   
