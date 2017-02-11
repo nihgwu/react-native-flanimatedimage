@@ -14,6 +14,11 @@ This module is modified from https://github.com/browniefed/react-native-flanimat
 npm install react-native-flanimatedimage --save
 ```
 
+If you are using react-native@0.40 or below
+```shell
+npm install react-native-flanimatedimage@0.0.3 --save
+```
+
 ## Link
 
 In XCode, in the project navigator:
