@@ -227,6 +227,7 @@
 					"$(SRCROOT)/../../react-native/Libraries/Image/**",
 					"$(SRCROOT)/../../../ios/Carthage/Build/iOS/FLAnimatedImage.framework/Headers",
 					"$(SRCROOT)/../../../ios/Pods/Headers/Public/FLAnimatedImage",
+					"$(SRCROOT)/../../../ios/Pods/FLAnimatedImage/FLAnimatedImage",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -244,6 +245,7 @@
 					"$(SRCROOT)/../../react-native/Libraries/Image/**",
 					"$(SRCROOT)/../../../ios/Carthage/Build/iOS/FLAnimatedImage.framework/Headers",
 					"$(SRCROOT)/../../../ios/Pods/Headers/Public/FLAnimatedImage",
+					"$(SRCROOT)/../../../ios/Pods/FLAnimatedImage/FLAnimatedImage",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
