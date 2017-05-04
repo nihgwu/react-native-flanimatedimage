@@ -37,11 +37,9 @@
 RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
 
 
-- (void)removeFromSuperview
+- (void)dealloc
 {
-  
   [_imageView removeObserver:self forKeyPath:@"currentFrameIndex"];
-  [super removeFromSuperview];
 }
 
 - (void)layoutSubviews
