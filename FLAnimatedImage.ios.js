@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import {
-  requireNativeComponent,
-  NativeModules,
-  StyleSheet,
-  Image,
-} from 'react-native'
+import { requireNativeComponent, NativeModules, StyleSheet } from 'react-native'
+
+import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
 
 const {
   ScaleToFill,
@@ -45,7 +42,7 @@ class FLAnimatedImage extends Component {
 
   render() {
     const contentMode = MODES[this.props.resizeMode]
-    const source = Image.resolveAssetSource(this.props.source) || {
+    const source = resolveAssetSource(this.props.source) || {
       uri: undefined,
       width: undefined,
       height: undefined,
