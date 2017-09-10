@@ -1,36 +1,30 @@
-'use strict';
-
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import {
   requireNativeComponent,
   NativeModules,
   StyleSheet,
-} from 'react-native';
-
-import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
+  Image,
+} from 'react-native'
 
 const {
   ScaleToFill,
   ScaleAspectFit,
-  ScaleAspectFill
-} = NativeModules.RNFLAnimatedImageManager;
+  ScaleAspectFill,
+} = NativeModules.RNFLAnimatedImageManager
 
 const MODES = {
-  'stretch': ScaleToFill,
-  'contain': ScaleAspectFit,
-  'cover': ScaleAspectFill
+  stretch: ScaleToFill,
+  contain: ScaleAspectFit,
+  cover: ScaleAspectFill,
 }
 
 class FLAnimatedImage extends Component {
   static propTypes = {
-    /*
-      native only
-    */
+    // native only
     contentMode: PropTypes.number,
-    /*
 
-    */
     source: PropTypes.oneOfType([
       PropTypes.shape({
         uri: PropTypes.string,
@@ -43,26 +37,30 @@ class FLAnimatedImage extends Component {
     src: PropTypes.string,
     resizeMode: PropTypes.string,
     onFrameChange: PropTypes.func,
-    onLoadEnd: PropTypes.func
-  };
+    onLoadEnd: PropTypes.func,
+  }
   static defaultProps = {
     resizeMode: 'contain',
-  };
+  }
 
   render() {
-    const contentMode = MODES[this.props.resizeMode];
-    const source = resolveAssetSource(this.props.source) || { uri: undefined, width: undefined, height: undefined };
-    const src = source.uri;
+    const contentMode = MODES[this.props.resizeMode]
+    const source = Image.resolveAssetSource(this.props.source) || {
+      uri: undefined,
+      width: undefined,
+      height: undefined,
+    }
+    const src = source.uri
     return (
       <RNFLAnimatedImage {...this.props} src={src} contentMode={contentMode} />
-    );
+    )
   }
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({})
 
-});
-
-
-const RNFLAnimatedImage = requireNativeComponent('RNFLAnimatedImage', FLAnimatedImage);
-export default FLAnimatedImage;
+const RNFLAnimatedImage = requireNativeComponent(
+  'RNFLAnimatedImage',
+  FLAnimatedImage
+)
+export default FLAnimatedImage

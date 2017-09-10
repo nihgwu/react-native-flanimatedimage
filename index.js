@@ -1,5 +1,3 @@
-'use strict';
+import FLAnimatedImage from './FLAnimatedImage'
 
-import FLAnimatedImage from './FLAnimatedImage';
-
-export default FLAnimatedImage;
+export default FLAnimatedImage
