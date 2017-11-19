@@ -13,7 +13,7 @@
 #import "RNFLAnimatedImage.h"
 
 #import <React/RCTBridgeModule.h>
-#import <RCTImage/RCTImageUtils.h>
+#import "RCTImageUtils.h"
 #import <React/UIView+React.h>
 #import <React/RCTLog.h>
 
